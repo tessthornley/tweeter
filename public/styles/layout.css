@@ -14,12 +14,22 @@ html {
  * Global layout stuff
  */
 
-body {
+ body {
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   color: #244751;
   background-color: #eee;
 }
 
+.container {
+  width: 450px;
+  height: 450px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  background-color: #FFFFFF;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
