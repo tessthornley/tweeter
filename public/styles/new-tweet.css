@@ -1,15 +1,15 @@
-.container .new-tweet {
+.new-tweet {
   background-color: #e9e9e9;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
-  border-radius: 5px; 
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #D7D7D7;
 }
 
-textarea {
+#compose-tweet {
   padding: 0.5em;
   margin-left: 0.1em;
   width: 368px;
+  height: 75px;
 }
 
 .counter {
@@ -17,8 +17,15 @@ textarea {
   font-style: italic;
 }
 
-h2 {
-  display: inline-block;
+.counter-invalid {
+  float: right;
+  font-style: italic;
+  color: #FF0000;
+}
+
+#compose {
+  white-space: nowrap;
   border-bottom: 1px solid black;
   padding-right: 13.5rem;
+  margin-top: 0;
 }
