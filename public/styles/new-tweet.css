@@ -3,13 +3,16 @@
   padding: 0.5em;
   border-radius: 5px;
   border: 1px solid #D7D7D7;
+  position: sticky;
+  top: 85px;
+  z-index: 9999;
 }
 
 #compose-tweet {
   padding: 0.5em;
-  margin-left: 0.1em;
   width: 368px;
   height: 75px;
+  margin-top: 10px;
 }
 
 .counter {
@@ -28,4 +31,15 @@
   border-bottom: 1px solid black;
   padding-right: 13.5rem;
   margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.error {
+  background-color: #FADBD8;
+  color: #EC7063;
+  border: 1px solid #EC7063;
+  border-radius: 5px;
+  padding: 0.5em;
+  top: 0;
+  font-weight: bold;
 }
