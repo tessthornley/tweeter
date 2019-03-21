@@ -1,8 +1,6 @@
 "use strict";
 
-// Simulates the kind of delay we see with network or filesystem operations
-
-// Defines helper functions for saving and getting tweets, using the database `db`
+// Defines helper functions for saving and getting tweets, using the Mongo database
 module.exports = function makeDataHelpers(db) {
   return {
 
@@ -11,10 +9,9 @@ module.exports = function makeDataHelpers(db) {
       db.collection("tweets").insertOne(newTweet);
     },
 
-    // Get all tweets in `db`, sorted by newest first
+    // Get all tweets in `db`
     getTweets: function(callback) {
       db.collection("tweets").find().toArray(callback);
     }
-
   };
-}
+};
