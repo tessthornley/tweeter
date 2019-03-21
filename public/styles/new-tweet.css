@@ -3,9 +3,8 @@
   padding: 0.5em;
   border-radius: 5px;
   border: 1px solid #D7D7D7;
-  position: sticky;
   top: 85px;
-  z-index: 9999;
+  z-index: 2;
 }
 
 #compose-tweet {

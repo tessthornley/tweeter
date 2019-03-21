@@ -34,7 +34,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section class="new-tweet">
+        <section class="new-tweet" hidden>
             <h2 id="compose">Compose Tweet</h2>
             <div class="error" hidden></div>  
             <form method="POST" action="/tweets">
@@ -46,24 +46,37 @@
         <section id="tweets-container">
         </section>
 
+        <script> 
+        $('document').ready(function() {
+          $('.new-tweet').fadeToggle();
+        });
+        </script>
         <script>
             $("form").submit(function(event) {
               event.preventDefault();
 
               let $textAreaValue = $('#compose-tweet').val();
               if ($textAreaValue.length > 140) {
-                  $('.error').text("Error! Character count cannot exceed 140. Please compose a tweet of 140 characters or fewer to continue.");
-                  $('.error').slideUp();
-                  $('.error').slideDown();
+                  $('.error').text("Error! Character count cannot exceed 140. Please compose a tweet of 140 characters or less.");
+                  $('.error').hide();
+                  $('.error').slideDown(function () {
+                    $("form").submit(function(event) {
+                      $('.error').slideDown();
+                    });
+                  });
+                
                   return;
                 } else if ($textAreaValue === '') {
-                  $('.error').text('Error! Please enter characters in the textbox to compose your tweet.');
-                  $('.error').slideUp();
-                  $('.error').slideDown();
+                  $('.error').text('Error! Textbox is empty. Please enter some characters in the textbox to compose your tweet.');
+                  $('.error').hide();
+                  $('.error').slideDown(function () {
+                    $("form").submit(function(event) {
+                      $('.error').slideDown();
+                    });
+                  });
                   return;
                 } else {
-                  $('.error').slideUp();
-                  $('.error').slideDown();
+                  $('.error').hide();
                   $.post("/tweets", $('form').serialize());
                   location.reload(true);
                 }
