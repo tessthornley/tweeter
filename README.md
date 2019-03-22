@@ -5,9 +5,9 @@ A simple, single-page AJAX-based Twitter clone that uses jQuery, HTML5, and CSS3
 
 ## Final Product
 
-!["Screenshot description"](URL)
-!["Screenshot description"](URL)
-!["Screenshot description"](URL)
+!["Tweeter Homepage"](https://github.com/tessthornley/tweeter/blob/master/docs/homepage.png)
+!["Tweet Feed"](https://github.com/tessthornley/tweeter/blob/master/docs/tweet-feed.png)
+!["Compose Tweet Box"](https://github.com/tessthornley/tweeter/blob/master/docs/tweet-box.png)
 
 ## Dependencies
 
