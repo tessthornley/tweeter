@@ -27,16 +27,17 @@
 
 #compose {
   white-space: nowrap;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #00a087;
   padding-right: 13.5rem;
   margin-top: 0;
   margin-bottom: 5px;
+  color: #00a087;
 }
 
 .error {
   background-color: #FADBD8;
-  color: #EC7063;
-  border: 1px solid #EC7063;
+  color: #ED0A3F;
+  border: 1px solid #ED0A3F;
   border-radius: 5px;
   padding: 0.5em;
   top: 0;

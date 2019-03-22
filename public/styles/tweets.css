@@ -79,6 +79,10 @@ article.tweet:hover footer .icons {
   opacity: 0.5;
 }
 
+article.tweet:hover footer .icons i {
+  padding-left: 0.5em;
+}
+
 article.tweet footer {
   border-top: 1px solid #D7D7D7;
   white-space: nowrap;
