@@ -28,7 +28,7 @@
   function createTweetElement(tweet) {
     let dateArray = [];
     // The Date.now() function in the tweets.js file was producing a timestamp that was off by several minutes, added extra time to correct
-    let newDateObj = moment(tweet.created_at).add(1100, 's').toDate();
+    let newDateObj = moment(tweet.created_at).add(1080, 's').toDate();
     let ts = new Date(newDateObj);
     dateArray.push(ts.getFullYear(), ts.getMonth(), ts.getDate(), ts.getHours(), ts.getMinutes(), ts.getSeconds());
     // Moment.js used to calculate relative time from dateArray
