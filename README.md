@@ -22,4 +22,4 @@ A simple, single-page AJAX-based Twitter clone that uses jQuery, HTML5, and CSS3
 ## Getting Started
 
 - Install all dependencies (using the "npm install" command).
-- Run the development web server using the "node index.js" command.
+- Run the development web server using the "npm run local" command.
