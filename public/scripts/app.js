@@ -26,17 +26,17 @@
   inserts the info of the new tweet into the existing article structure, then returns the value.
   */
   function createTweetElement(tweet) {
+    // Article structure to interpolate new tweet info into
+    let article = `<article class="tweet"><header><img class="header-img" src=${tweet.user.avatars.small}><h2 class="header-display">${tweet.user.name}</h2><p class="header-p">${tweet.user.handle}</p></header><section><p class="section-p">${escape(tweet.content.text)}</p></section><footer><p class="footer-p">${calculateTimeAgo(tweet.created_at)}</p><p class="icons"><i class="fa fa-flag"></i><i class="fa fa-retweet"></i><i class="fa fa-heart"></i></p></footer></article>`;
+    return article;
+  }
+
+  function calculateTimeAgo(date) {
     let dateArray = [];
-    // The Date.now() function in the tweets.js file was producing a timestamp that was off by several minutes, added extra time to correct
-    let newDateObj = moment(tweet.created_at).add(1080, 's').toDate();
-    let ts = new Date(newDateObj);
-    dateArray.push(ts.getFullYear(), ts.getMonth(), ts.getDate(), ts.getHours(), ts.getMinutes(), ts.getSeconds());
+    dateArray.push(new Date(date).getFullYear(), new Date(date).getMonth(), new Date(date).getDate(), new Date(date).getHours(), new Date(date).getMinutes(), new Date(date).getSeconds());
     // Moment.js used to calculate relative time from dateArray
     let daysAgo = moment(dateArray).fromNow();
-
-    // Article structure to interpolate new tweet info into
-    let article = `<article class="tweet"><header><img class="header-img" src=${tweet.user.avatars.small}><h2 class="header-display">${tweet.user.name}</h2><p class="header-p">${tweet.user.handle}</p></header><section><p class="section-p">${escape(tweet.content.text)}</p></section><footer><p class="footer-p">${daysAgo}</p><p class="icons"><i class="fa fa-flag"></i><i class="fa fa-retweet"></i><i class="fa fa-heart"></i></p></footer></article>`;
-    return article;
+    return daysAgo;
   }
 
   /* Function that uses jQuery to make an AJAX GET request to /tweets; once this is received the promise passes
